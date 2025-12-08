@@ -1,0 +1,215 @@
+@font-face {
+	font-family: 'sourcecode';
+	src: url(fonts/SourceCodePro-Regular.otf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'sourcecode';
+	src: url(fonts/SourceCodePro-Bold.otf);
+	font-style: normal;
+	font-weight: 600;
+}
+
+body {
+    font-family: sourcecode, helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    margin: 0%; /* had to put the margin and padding at zero because of uneccesary spaces. Ex: the header was not touching the edges of the  page. */
+    padding: 0%;
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat; /* I did not want to use tiling, as I have a kind of texture in the background of my background image. I will make a more legit-looking version later. */
+    background-size: cover;
+}
+
+a {
+    color: rgb(205, 9, 9);
+}
+
+
+/* Header Items. Header holds the section "headerleft", which holds the logo and "Copy Cat Printing". Later, I want the button that gives the Spanish translation to the right. */
+header {
+    font-family: sourcecode, helvetica, sans-serif;
+    font-style: normal;
+    font-size: 1vw; /* been using vw (viewport width), as when I use em or px, the items don't scale the same */
+    font-weight: 600;
+    padding: .35% .5%; /* been using a mix of units (%, em, vw, etc.). I'm not sure if there is a good practice for standardizing this, or if that's a nonissue. */
+    background-color: #fab040; /* been using grayscale for now, as I don't want to get too focused on color. This matches my very first mockup. */
+    border: .125em solid black;
+}
+
+/* I put the logo and text in a section of its own, as when I did them as just a left floating image and a paragraph or regular text, the alignment was never right. */
+.headerleft p {
+    margin: 0; /* I also had to use margin: 0 for the text here, as there would be excess space above and below the text */
+}
+
+.logo {
+    float: left;
+    width: 1.75%;
+    margin-right: .5%;
+    padding-right: .5%;
+    border-right: .125em solid black;
+}
+
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/* Navigation Items. This holds the navigation icons and text, which are arranged on either side of the main section. */
+.naviconcontainer {
+    display: block;
+    margin-top: 30%;
+}
+
+/*When the mouse hovers over the icons, it looks as if they are inset, using a darker background color and an inset box shadow. */
+.naviconcontainer a:hover {
+    display: block;
+    background-color: #00000015;
+    box-shadow: inset .35em .35em #0000001b;
+}
+
+/* On the left, are the Aout Us, Reviews, Services, and Glossary navigation icons. */
+.aside1 {
+    display: block;
+    float: left;
+    text-align: center;
+    margin-left: 3%;
+    line-height: 0%;
+}
+
+.aside1 p {
+    margin: 15% 0% 50% 0%;
+    font-size: smaller;
+}
+
+/* On the right, are the Facebook and Instagram navigation icons. I may put other items here, like the note on an ordering guide, or the certifications seen in the mock up. */
+.aside2 {
+    display: block;
+    float: right;
+    text-align: center;
+    margin-right: 3%;
+    line-height: 0%;
+
+}
+
+.aside2 p {
+    margin: 15% 0% 50% 0%;
+    font-size: smaller;
+}
+
+/* This is to make the box around the navigation icons more sqaure and even looking. */
+.navicon {
+    width: 70%;
+    padding: 20% 0% 15% 0%;
+}
+
+
+
+
+/* This is for the center block of the page, which will hold the picture of the Copy Cat building, the note about orders and inquiries, and the contact and visiting info. */
+main {
+    display: block;
+    width: 30%;
+    background-color: #fff3d8;
+    margin: auto; /* I don't know why, but none of the normal ways I tried to amke the main box align to the middle of the page worked. So, I look it up online and was given this, which works perfectly, though I don't understand why. */
+    margin-top: 1.5%;
+    padding: 1%;
+    display: flow-root; /* When I had the bottom two boxes float to the left and right, the main box no longer extended to contain them. I looked it up and was told that, when using float, the normal flow of stuff no longer applies, and that I should use this to override that. */ 
+    border: .125em solid black;
+    box-shadow: .35em .35em #00000044;
+}
+
+
+.building {
+    width: 100%;
+    border: .125em solid black;
+}
+
+
+.contactorvisit {
+    font-size: .73vw; /* I wanted to have it so that the font size of this would automatically resize so that the width would fit the main box, without line breaks. This was impossible for me to figure out, and the best I would find was using vw or cqw. I'm sure there has to be a better way. */
+}
+
+
+/* This holds the contact info in the left box, and the visitng info to the right. This is where eveything got really confusing and convoluted, but I was eventually able to get the result I wanted, but I have no idea if any of it is remotely good practice. */
+.sectionmain {
+    display: flex; /* After struggling to get my boxes to match in height, I looked it up was told to use flex display, which seems to work, though I don't know if I implemented it well. */
+    gap: 3%;
+    font-size: .95vw;
+}
+
+/* This is where the contact info resides. */
+.aside3 {
+    flex: 1; /* This is what I was told to do, when I looked online, to get the boxes to match in size. I'm assuming it's a ratio kind of thing. */
+    float: left;
+    display: flex; /* I also put the text and accompanying images into sections, as, again, I could not get any alignment correct otherwise. I don't know if there is a better way. So, this is also a flex display. */
+    flex-direction: column; /* When I didn't use this, everything was side by side. */
+    padding: 2.5% 2% 2% 4.5%; /* The padding got all crazy because it looked misaligned when the padding was uniform due to the shadow. */
+    background-color: #fff3d8;
+    border: .125em solid black;
+    box-shadow: inset .35em .35em #00000044;
+}
+
+/* These are the three Phone, Fax, and E-Mail sections. */
+.contactinfo {
+    flex: 1; /* I did this again to make everything match */
+    align-content: center;
+}
+
+/* I did this so that the first line of all the sections here would be bolded. */
+.sectionmain p::first-line {
+    font-family: sourcecode, helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+/* I did this to get rid of the uneccesary spacing. */
+.sectionmain p {
+    margin: 0%;
+}
+
+.contactinfo img {
+    float: left;
+    height: 2.75vw;
+    margin-right: 8%;
+}
+
+/* This holds the address and hours, in their own sections. */
+.aside4 {
+    flex: 1;
+    float: right;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5% 2% 2% 2.5%;
+    background-color: #fff3d8;
+    border: .125em solid black;
+    box-shadow: inset .35em .35em #00000044;
+}
+
+/* These are the two Adress and Hours sections */
+.visit {
+    flex: 1;
+    line-height: 120%;
+    padding: 3%;
+}
+
+.certificates {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    bottom: 0;
+    right: 0;
+    padding: 2%;
+}
+
+.certificates img {
+    margin-top: 5%;
+    border: .125em solid black;
+    box-shadow: .25em .25em #00000044;
+}
