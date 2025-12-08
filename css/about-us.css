@@ -1,0 +1,66 @@
+@font-face {
+	font-family: 'sourcecode';
+	src: url(fonts/SourceCodePro-Regular.otf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'sourcecode';
+	src: url(fonts/SourceCodePro-Bold.otf);
+	font-style: normal;
+	font-weight: 600;
+}
+
+body {
+    font-family: sourcecode, helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    margin: 0%;
+    background-color: #fff3d8;
+    font-family: 'sourcecode';
+}
+
+#titlebar {
+    background-color: orange;
+    border: 1px solid black;
+    padding: 0;
+}
+
+#titlebar ol {
+    padding: .5% 0% .5% 1%;
+    margin: 0;
+}
+
+.button {
+    display: inline-block;
+}
+
+.button a {
+    font-family: sourcecode;
+    text-decoration: none;
+    color: black;
+}
+
+#titlebar li:not(:last-child)::after {
+    display: inline-block;
+    color: black;
+    content: "|";
+    padding: 0% 3px 0% 9px;
+
+}
+
+#logo {
+    height: 1.25em;
+    vertical-align: middle;
+}
+
+
+/* Specific for about us page */
+main {
+    margin: 3%;
+}
+
+h1 {
+    text-align: center;
+}
