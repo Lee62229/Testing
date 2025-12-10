@@ -234,7 +234,7 @@ a {
 }
 
 #box {
-    width: 26em;
+    width: 28em;
 }
 
 #segment-2 {
@@ -247,42 +247,24 @@ a {
     width: 90%;
 }
 
-#segment-3 {
-    flex-direction: column;
-}
-
-#subsegment-left {
-    margin-bottom: 3%;
-}
-
-#subsegment-right {
-    display: flex;
-}
-
-#contact-info li:not(:first-child) {
-    margin-top: 0%;
-}
-
-
-.visit {
-    flex: 1;
-    padding-bottom: 3%;
-    gap: 0%;
-}
-
 #certifications {
-    position: relative;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    bottom: 0;
-    padding: 2%;
-    gap: 2%;
+    padding: 0%;
 }
 
 #certifications img {
-    margin-top: 5%;
     border: .125em solid black;
     box-shadow: .25em .25em #00000044;
+}
+
+#certification-1 {
+    margin: 3% 1.5% 3% 3%;
+}
+
+#certification-2 {
+    margin: 3% 3% 3% 1.5%;
 }
 
 }
