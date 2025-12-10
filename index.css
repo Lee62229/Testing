@@ -221,7 +221,7 @@ a {
 }
 
 .icon:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 18x;
 
 }
 
@@ -230,5 +230,13 @@ a {
     padding: 15% 0% 10% 0%;
 }
 
+#box {
+    width: 26em;
+    font-size: smaller;
+}
+
+#certifications img {
+    width: 90%;
+}
 
 }
