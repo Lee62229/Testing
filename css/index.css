@@ -16,7 +16,7 @@ body {
     font-family: sourcecode, helvetica, sans-serif;
     font-style: normal;
     font-weight: 100;
-    font-size: small;
+    font-size: 90%;
     background-image: url("../images/bg.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -97,7 +97,7 @@ p {
 }
 
 #icon-img {
-    width: 70%;
+    width: 65%;
     padding: 15% 0% 10% 0%;
 }
 
@@ -109,7 +109,7 @@ p {
 
 
 #box {
-    width: 28em;
+    width: 30em;
     background-color: #fff3d8;
     margin: auto;
     padding: .85em;
@@ -125,7 +125,7 @@ p {
 
 #segment-2 {
     font-weight: 600;
-    font-size: .926em;
+    font-size: 1.11em;
     margin-bottom: 1%;
 }
 
@@ -140,18 +140,20 @@ p {
 }
 
 #subsegment-left {
-    flex: auto;
+    flex: 1;
     border: .125em solid black;
     box-shadow: inset .35em .35em #00000044;
-    padding: 2.5% 2% 2% 2.5%;
 }
 
 #subsegment-right {
-    flex: auto;
+    flex: 1;
     border: .125em solid black;
     box-shadow: inset .35em .35em #00000044;
-    padding: 2.5% 2% 2% 2.5%;
     text-align: center;
+}
+
+.subsegment {
+    padding: 3% 4% 2% 5%;
 }
 
 #contact-info {
@@ -160,21 +162,22 @@ p {
     margin: 0%;
 }
 
+#contact-info li:not(:first-child) {
+    margin-top: 9%;
+}
+
 #contact-icon {
-    height: 2.75em;
-/*    vertical-align: middle; */
-    margin-right: 3%;
+    height: 2.5em;
+    margin-right: 10%;
 }
 
 .info {
     display: inline-block;
-    margin-left: 5%;
-/*    vertical-align: middle; */
 }
 
 
 .visit {
-    padding: 2%;
+    padding-bottom: 3%;
 }
 
 
@@ -205,7 +208,7 @@ a {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     
 #desktop-left{
     float: none;
@@ -221,7 +224,65 @@ a {
 }
 
 .icon:not(:last-child) {
-    margin-right: 30px;
+    margin-right: 20px;
 
 }
+
+#icon-img {
+    width: 70%;
+    padding: 15% 0% 10% 0%;
+}
+
+#box {
+    width: 26em;
+}
+
+#segment-2 {
+    font-weight: 600;
+    font-size: .96em;
+    margin-bottom: 1%;
+}
+
+#certifications img {
+    width: 90%;
+}
+
+#segment-3 {
+    flex-direction: column;
+}
+
+#subsegment-left {
+    margin-bottom: 3%;
+}
+
+#subsegment-right {
+    display: flex;
+}
+
+#contact-info li:not(:first-child) {
+    margin-top: 0%;
+}
+
+
+.visit {
+    flex: 1;
+    padding-bottom: 3%;
+    gap: 0%;
+}
+
+#certifications {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    bottom: 0;
+    padding: 2%;
+    gap: 2%;
+}
+
+#certifications img {
+    margin-top: 5%;
+    border: .125em solid black;
+    box-shadow: .25em .25em #00000044;
+}
+
 }
