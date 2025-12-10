@@ -1,0 +1,124 @@
+@font-face {
+	font-family: 'sourcecode';
+	src: url(fonts/SourceCodePro-Regular.otf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'sourcecode';
+	src: url(fonts/SourceCodePro-Bold.otf);
+	font-style: normal;
+	font-weight: 600;
+}
+
+body {
+    font-family: sourcecode, helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: small;
+    background-color: #fff3d8;
+    height: 100vh;
+    margin: 0%;
+}
+
+p {
+    padding: 0%;
+    margin: 0%;
+}
+
+
+
+
+#titlebar {
+    font-weight: 600;
+    font-size: smaller;
+    background-color: #fab040;
+    border: .125em solid black;
+    padding: .35% 0% .35% .45%;
+}
+
+#titlebar ol {
+    padding: 0%;
+    margin: 0%;
+}
+
+.button {
+    display: inline-block;
+}
+
+.button a {
+    text-decoration: none;
+    color: black;
+}
+
+#titlebar li:not(:last-child) {
+    padding-right: .5%;
+    border-right: .125em solid black;
+}
+
+#logo {
+    height: 1.2em;
+    vertical-align: top;
+}
+
+
+/* Specific for contact form page */
+form {
+    margin: 2% auto;
+    padding: 1%;
+    width: 40%;
+}
+
+label {
+    margin-bottom: .75%;
+}
+
+form ::placeholder{
+    font-family: sourcecode, helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    margin-bottom: 5%;
+    border: .125em solid black;
+    background-color: #fff3d8;
+    box-shadow: inset .2em .2em #00000026;
+    padding: 1.25% 1% 1% 1.5%;
+}
+
+textarea {
+    margin-bottom: 5%;
+    resize: vertical;
+    border: .125em solid black;
+    background-color: #fff3d8;
+    box-shadow: inset .2em .2em #00000026;
+    padding: 1.25% 1% 1% 1.5%;
+}
+
+.formbottom {
+    display: flex;
+    gap: 2%;
+}
+
+.formbuttons {
+    flex: 1;
+    border: .125em solid black;
+    box-shadow: none;
+}
+
+input[type="reset"]  {
+    background-color: lightgray;
+
+}
+
+input[type="submit"]  {
+    background-color: #fab040;
+}
