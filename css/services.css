@@ -1,0 +1,20 @@
+/* this style sheet is specific to the services page */
+
+ul { /* the list hold the service items */
+    list-style: none; /*this takes away the list markers */
+    display: flex; /* this spreads the items evenly across and allows them to appear as a row, rather than a column */
+    justify-content: center;
+    flex-wrap: wrap; /* this line breaks the items, rather than letting them go past the edge of the viewport */
+    text-align: center;
+    padding: 0%;
+    margin: 1%;
+    gap: 5%;
+}
+
+.service {
+    flex-basis: calc(100% / 4); /* this alows the items to line break after 3 items */
+}
+
+img {
+    width: 70%;
+}

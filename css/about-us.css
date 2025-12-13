@@ -1,0 +1,10 @@
+/* this style sheet is specific to the about-us page */
+
+main {
+    font-size: medium;
+    margin: 2.75% 3%;
+}
+
+p + p { /* this allows there to be margin between the paragraphs without affecting the first paragraph */
+    margin-top: 1.5%;
+}

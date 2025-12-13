@@ -1,0 +1,38 @@
+/* this style sheet is specific to the reviews page */
+
+#reviews-list { /* this is the list containg each review box */
+    list-style: none; /* this takes away the markers */
+    padding: 0%; /* this removes unecessary spacing */
+    margin-top: 2%;
+
+}
+
+.review-box { /* each review, name, and stars are contained in this box */
+    border: .125em solid black;
+    box-shadow: .35em .35em #00000044;
+    padding: 1%;
+    margin: 1% 2%;
+}
+
+.name {
+    font-size: medium;
+    margin: 0% 0% .5% 0%
+}
+
+.stars {
+    float: inline-end; /* this puts it in line with the line below, at the end */
+}
+
+.review {
+    font-size: small;
+}
+
+.review + .review {
+    margin-top: 1.5%; /* this puts margins between the boxes, without adding more spacing outside of the list */
+}
+
+.review-img {
+    margin-top: 1%;
+    margin-bottom: -.35%; /* an unecessary space was added below the image that I could not get rid of, so I did this */
+}
+

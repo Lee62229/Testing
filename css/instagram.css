@@ -1,0 +1,9 @@
+/* this style sheet is specific to the instagram page */
+
+main {
+    width: 500px; /* this makes the box the same width as the facebook thing. It made me do it in px, which I think goes against the rubric, but fit-content did not work. */
+    height: 500px;
+    margin: 2% auto; /* the auto margins lets it be centered */
+    border: .125em solid black;
+    box-shadow: .35em .35em #00000044;
+}

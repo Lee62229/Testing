@@ -1,0 +1,73 @@
+/* this style sheet is common between all the pages */
+
+/* fonts */
+@font-face {
+	font-family: 'sourcecode';
+	src: url(fonts/SourceCodePro-Regular.otf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+@font-face {
+	font-family: 'sourcecode';
+	src: url(fonts/SourceCodePro-Bold.otf);
+	font-style: normal;
+	font-weight: 600;
+}
+
+
+
+/* body */
+body {
+    font-family: sourcecode, helvetica, sans-serif;
+    font-size: 90%;
+    background-color: #fff3d8; /* every other page will have this. the homepage will have an image that will override this */
+    margin: 0%; /* this keeps there from being space around the titlebar */
+}
+
+p { /* gets rid off extra spacing around all <p> text */
+    padding: 0%;
+    margin: 0%;
+}
+
+
+
+/* Titlebar (where logo and website title reside) */
+#titlebar {
+    font-weight: 600;
+    font-size: smaller;
+    background-color: #fab040;
+    border: .125em solid black;
+    padding: .35% 0% .35% .45%;
+}
+
+#titlebar ol { /* list hold titlebar links */
+    padding: 0%;
+    margin: 0%;
+}
+
+.button { /* each list item is a titlebar button */
+    display: inline-block; /* this lets the list appear horizontally */
+}
+
+.button a { /* button links will have link appearance removed */
+    text-decoration: none;
+    color: black;
+}
+
+#titlebar li:not(:last-child) { /* each button should have a line in between, to do so, there should be a border to the right, excluding the last button */
+    padding-right: 1%;
+    border-right: .125em solid black;
+}
+
+#logo {
+    height: 1.2em;
+    vertical-align: top;
+}
+
+
+
+/* all the links should be maroon, rather than blue */
+a {
+    color: maroon;
+}

@@ -1,0 +1,12 @@
+/* this style sheet is specific to the video page */
+
+main {
+    width: 60%;
+    margin: 2% auto;
+}
+
+video {
+    width: 100%;
+    border: .125em solid black;
+    box-shadow: .35em .35em #00000044;
+}

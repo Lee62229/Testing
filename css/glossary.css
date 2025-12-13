@@ -1,0 +1,14 @@
+/* this style sheet is specific to the glossary page */
+
+main {
+    margin: 2%;
+}
+
+h1 { /* terms */
+    font-size: medium;
+    margin-bottom: .5%; /* this was to lessen the space between the terms and their definitions a bit */
+}
+
+h1:not(:first-child) { /* this adds space between the terms, excluding the first terms, so that there is not excess space at the top */
+    margin-top: 3%;
+}

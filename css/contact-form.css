@@ -1,0 +1,48 @@
+/* this style sheet is specific to the contact-form page */
+
+form {
+    margin: 3% auto; /* using auto for the left and right margins puts the form in the middle somehow */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: .25%; /* this puts a space between the label and the box */
+}
+
+form ::placeholder{  /* if the font isn't specified, a default font will be in the placeholder */
+    font-family: sourcecode, helvetica, sans-serif;
+}
+
+.inputs { /* this applies to all the inputs, minus the buttons. this is so that the styles will apply to all the inputs, as the input and text area are different */
+    border: .125em solid black;
+    background-color: #fff3d8;
+    box-shadow: inset .2em .2em #00000026;
+    padding: 1% 1% .75% 1%; /* the padding is different because the shadows cause it to look uncentered */
+    margin-bottom: 2%; /* this is so that there is a space between the inputs */
+}
+
+textarea {
+    resize: vertical; /* this is so that the text areas can only be resize vertically, so the box can't be wider than the rest */
+}
+
+.formbottom {
+    display: flex; /* this allows the bottom buttons to stretch across the form */
+    gap: 1.5%;
+    
+}
+
+.formbuttons {
+    flex: 1; /* this is so that the buttons will stretch across evenly */
+    border: .125em solid black; /* I did this separately, and did not include the buttons in the "inputs" class, so that the shadows would not be on the buttons */
+    padding: 1% 1% .75% .75%;
+}
+
+input[type="reset"]  {
+    background-color: lightgray;
+}
+
+input[type="submit"]  {
+    background-color: #fab040;
+}

@@ -1,0 +1,221 @@
+/* this style sheet is specific to the homepage */
+
+/* body */
+body {
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* this allows the background image to cover the entire height of the viewport */
+}
+
+
+
+/* Desktop (where the nav icons resides) */
+#desktop {
+    padding: .5% 2% .5% 2%;
+}
+
+#desktop-left{ /* About Us, Reviews, Services, Glossary */
+    float: left;
+}
+
+#desktop-right { /* Facebook, Instagram */
+    float: right;
+}
+
+#desktop ul { /* list holding the desktop icons */
+    text-align: center;
+    padding: 0%;
+    width: fit-content;
+    list-style-type: none;
+}
+
+.icon { /* each list item contains an icon and label */
+    margin-bottom: 25%;
+}
+
+.icon a:hover { /* each icon image is a link to its respective page, when hovering over the image, a shadowed box should appear */
+    display: block;
+    background-color: #00000015;
+    box-shadow: inset .35em .35em #0000001b;
+}
+
+#icon-img { /* the icon images have padding to build the hover box, and to give it a more centered appearance */
+    width: 65%;
+    padding: 15% 0% 10% 0%;
+}
+
+
+
+/* Welcome Box (where the middle box containing contact and inquiry info resides) */
+#box {
+    width: 30em;
+    background-color: #fff3d8;
+    margin: auto;
+    padding: .85em;
+    border: .125em solid black;
+    box-shadow: .35em .35em #00000044;
+}
+
+#segment-1 { /* where the welcome image resides) */
+    width: 100%;
+    border: .125em solid black;
+}
+
+#segment-2 { /* where the "contact or visit us..." message resides */
+    font-weight: 600;
+    font-size: 1.11em; /* this is so that the font-size exactly allows the text to be the width of the welcome box without wrapping. I could not figure out another way to do this */
+    margin-bottom: 1%;
+}
+
+#segment-3 { /* where the contact info and visiting info boxes reside */
+    display: flex; /* this allows them to be side by side */
+    gap: 3%;
+}
+
+.subsegment { /* this affects both the contact and visitng info boxes */
+    flex: 1; /* this alows the info boxes to stretch across the welcome box, and do so equally */
+    border: .125em solid black;
+    box-shadow: inset .35em .35em #00000044;
+    padding: 3% 4% 2% 5%; /* padding is altered to appear more centered due to the shadows */
+}
+
+#contact-info { /* this list contains the phone, fax, and email */
+    list-style: none; /* this removed the markers */
+    padding: 0%; /* this rids of unecessary spacing */
+    margin: 0%;
+}
+
+#contact-info li:not(:first-child) { /* this puts spacing between the list items, as I could not get it to work with space-between */
+    margin-top: 9%;
+}
+
+#contact-icon { /* these re the phone, fax, and email icons */
+    height: 2.5em;
+    margin-right: 10%;
+}
+
+.info { /* this is the text next to each icon */
+    display: inline-block; /* this allows the info text to appear beside the icons, rather than below */
+}
+
+#subsegment-right { /* where the visiting info resides */
+    text-align: center;
+}
+
+.visit + .visit { /* this allows for spacing between the address and hours text. this just ended up being the easiest way. */
+    margin-top: 5%;
+}
+
+.switchable-text { /* I included other versions of the visiting info text, as when the layout changes for a narrower viewport, the spacing is different */
+    display: none; /* this allows only the original text to show */
+}
+
+
+
+/* certifications */
+#certifications { /* contains the Equality VA and SWaM certificates */
+    position: absolute; /* this allows them to be stuck in a specific spot, so as not to mess up the rest of the flow */
+    display: flex; /* this allows them to be the same width */
+    flex-direction: column; /* this allows them to appear as a column, rather than a row */
+    bottom: 0; /* this puts them in the bottom corner */
+    right: 0;
+    padding: 2%;
+}
+
+#certifications img {
+    margin-top: 5%;
+    border: .125em solid black;
+    box-shadow: .25em .25em #00000044;
+}
+
+
+
+
+
+
+
+
+/* when the viewport is narrower than 700px, then layout should change accordingly */
+@media screen and (max-width: 700px) {
+
+#desktop p { /* this makes the icon labels a little smaller so that there can be more spacing between them */
+    font-size: small;
+}
+    
+#desktop-left{ /* this is so that the desktop icons will not be forced to left and right of the welcome box, but flow according to there order - above the box */
+    float: none;
+}
+
+#desktop-right {
+    float: none;
+}
+
+.icon {
+    display: inline-block; /* this allows the icons to appear horizontally */
+    margin-bottom: 0%;
+}
+
+.icon:not(:last-child) { /* this allows for spacing between the icons */
+    margin-right: 18px;
+
+}
+
+#icon-img { /* this makes the icons a little smaller to allow more space between them */
+    width: 60%;
+}
+
+#box { /* this makes the welcome box smaller */
+    width: 20em;
+}
+
+#segment-2 { /* this alters the contact and visit message to fit the width of the welcome box without wrapping */
+    font-size: .74em;
+}
+
+#segment-3 { /* this swithes the info boxes from being side by side, to being stacked */
+    flex-direction: column;
+    gap: 3%;
+}
+
+.subsegment { /* this adjusts the spacing of the info boxes. I've resigned to having convoluted spacing. Everything looks a little off so I am adjusting according to my eyeballs. */
+    padding-top: 5%;
+    padding-bottom: 3%;
+
+}
+
+#subsegment-left { /* more spacing adjustments */
+    margin-bottom: 3%;
+    padding-left: 9%;
+}
+
+#subsegment-left br { /* this removes the breaks in the contact info paragraphs, allowing all the text to be one line */
+    display: none;
+}
+
+#contact-info li:not(:first-child) { /* this adjusts the spacing between the contact info list items */
+    margin-top: 1%;
+}
+
+#contact-icon { /* this aligns the contact icons back to the middle, as removing the breaks caused them to be off-center */
+    vertical-align: middle;
+}
+
+.switchable-text { /* this makes the other text I made for the visiting info to appear, which fills the space better */
+    display: contents;
+}
+
+.original-text { /* this makes the original visiting info text disappear */
+    display: none;
+}
+
+#certifications img { /* the certification images began overflowing the viewport, so they were made smaller */
+    width: 48%; /* for some reason, this exact size worked well */
+}
+
+#certifications { /* with the narrower display, the certifications will now obscure the welcome box */
+    position: unset; /* this 'un-absolutes' the position, I think. In any case, it seems to have worked */
+    flex-direction: row; /* this changes the orientation from a column, back to a row */
+    gap: 2%;
+}
+}
