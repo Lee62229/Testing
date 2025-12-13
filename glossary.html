@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Copy Cat Printing</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css"> <!-- this style sheet is shared by all the pages for the things that are uniform between them all -->
+	<link rel="stylesheet" type="text/css" href="css/glossary.css"> <!-- these style sheets are unique to each page -->
+</head>
+
+<body>
+
+    <!-- Titlebar -->
+    <nav id="titlebar">
+        <ol> <!-- the titlebar buttons were done as a list -->
+            <li class="button" id="logo-button"><a href="index.html"><img src="images/logo.svg" alt="links to homepage" id="logo"></a></li> <!-- the logo is to the left and links to the homepage-->
+            <li class="button" id="copy-cat-button"><a href="index.html">Copy Cat Printing</a></li> <!-- the title of the website, Copy Cat Printing, is to the right of the logo and also links to the homepage -->
+            <li class="button" id="crumb-button"><a href="facebook.html">Glossary</a></li> <!-- this is the title of the current page, which is to the right of everything else -->
+        </ol>
+    </nav>
+
+    <main> <!-- this holds the terms and definitions-->
+        <h1>Crop Marks / Trim Marks</h1> <!-- term -->
+        <!-- definition -->
+        <p>These are marks added to your file that indicate where the paper should be cut after printing. In InDesign, if you have a document that is set to 8.5 by 11, and export it, the resulting file will also be 8.5 by 11. If you export it with the default crop marks, the file will be 9.08 by 11.58. The crop marks are what occupy that extra .58 of space around the edges, while your actual design is still 8.5 by 11. In this way, you will also have to print it on a paper size that is bigger than the standard letter size, 8.5 x 11 , and then cut it down to standard size. These are useful when you are printing something smaller than a standard paper size and need to know where to cut. They are also very useful when your document has a bleed.</p>
+
+        <h1>Bleed</h1>
+        <p>This is when your design overflows the intended, final size. If you have a document that is set to 8.5 by 11 and include a bleed, .125 (by default) will be added to each edge, and the exported file size will be 8.75 by 11.25, or 9.008 by 11.58 if you also add crop marks. Bleed is usually necessary if your design touches the edge of the paper. This is because the printer cannot print all the way to the edge of the paper and because it is hard to cut exactly to the edge of the design without either over-cutting or leaving white space. For example, if you have a background color other than white on an 8.5 by 11 document and you print it without bleed on 8.5 by 11 paper, about .25 on each edge of the paper will remain white. You would have to print it with bleed, on a larger paper, and cut it down. Adding cropmarks help you to  know exactly where to cut, without having to eyeball .125 of space. It’s important to understand if you need a bleed ahead of time. Otherwise, your design risks being trimmed farther than desired.</p>
+
+        <h1>Kiss Cut</h1>
+        <p>This is when the document needs to be cut to the edge, without the aid of bleed. This is difficult to achieve without over-cutting, or leaving white space, and is not recommended if precision is of the utmost priority.</p>
+
+        <h1>Margin</h1>
+        <p>This is the space around the design that is within the intended finish size. If an 8.5 by 11 document has a .5 margin, then the design space is actually 7.5 by 10. If you have a design or background, but don’t want to add bleed, crop marks, print on a larger paper, and then cut it down to size, you can choose to leave a .25 margin around your document instead. This is like a white border. This is not to be confused with bleed. The margin is within the finished boundaries, the bleed is on the outside and will be trimmed off.</p>
+    </main>
+    
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Copy Cat Printing</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css"> <!-- this style sheet is shared by all the pages for the things that are uniform between them all -->
+	<link rel="stylesheet" type="text/css" href="css/contact-form.css">  <!-- these style sheets are unique to each page -->
+</head>
+
+<body>
+
+    <!-- Titlebar -->
+    <nav id="titlebar">
+        <ol> <!-- the titlebar buttons were done as a list -->
+            <li class="button" id="logo-button"><a href="index.html"><img src="images/logo.svg" alt="links to homepage" id="logo"></a></li> <!-- the logo is to the left and links to the homepage-->
+            <li class="button" id="copy-cat-button"><a href="index.html">Copy Cat Printing</a></li> <!-- the title of the website, Copy Cat Printing, is to the right of the logo and also links to the homepage -->
+            <li class="button" id="crumb-button"><a href="contact-form.html">Contact Form</a></li> <!-- this is the title of the current page, which is to the right of everything else -->
+        </ol>
+    </nav>
+
+        <!-- this is the contact form-->
+        <form>
+            <!-- this is the First name text area -->
+            <label for="fname">First Name:</label>
+                <input type="text" class="inputs" id="fname" name="fname" placeholder="Jane">
+            <!-- this is the Last name text area -->
+            <label for="lname">Last Name:</label>
+                <input type="text" class="inputs" id="lname" name="lname" placeholder="Doe">
+            <!-- this is the Company name text area -->
+            <label for="company">Company:</label>
+                <input type="text" class="inputs" id="company" name="company" placeholder="Copy Cat Printing">
+            <!-- this is the Message text area -->
+            <label for="message">Message:</label>
+                <textarea class="inputs" id="message" name="message" placeholder="Quote: 2PT NCR Form, padded, 1/0, LTR, 100 sets"></textarea>
+            <!-- this is the E-Mail text area -->
+            <label for="email">E-Mail:</label>
+                <input class="inputs" type="email" id="email" name="email" placeholder="email@email.com">
+            <!-- these are the reset and submit buttons, which should sit side by side -->
+            <section class="formbottom"><input type="reset" class="formbuttons"><input type="submit" class="formbuttons"></section>
+        </form>
+    
+</body>
+</html>

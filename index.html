@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Copy Cat Printing</title>
+	<link rel="stylesheet" type="text/css" href="css/css.css"> <!-- this style sheet is shared by all the pages for the things that are uniform between them all -->
+	<link rel="stylesheet" type="text/css" href="css/index.css"> <!-- these style sheets are unique to each page -->
+</head>
+
+<body>
+    <!-- Titlebar -->
+    <nav id="titlebar">
+        <ol> <!-- the titlebar buttons were done as a list -->
+            <li class="button" id="logo-button"><a href="index.html"><img src="images/logo.svg" alt="links to homepage" id="logo"></a></li> <!-- the logo is to the left and links to the homepage-->
+            <li class="button" id="copy-cat-button"><a href="index.html">Copy Cat Printing</a></li> <!-- the title of the website, Copy Cat Printing, is to the right of the logo and also links to the homepage -->
+        </ol>
+    </nav>
+
+
+    <!-- desktop -->
+    <main id="desktop"> <!-- the main is supposed to emulate a computer desktop, with icons for each navigation link -->
+        <section id="desktop-left"> <!-- this section houses the icon list that sits to the left of the desktop -->
+            <ul id="left-icons"> <!-- this list holds the About Us, Reviews, Services, and Glossary links -->
+			<!-- each list items holds a link and its label. each link is an icon image. after the link is the label -->
+            <li class="icon" id="about-us"><a href="about-us.html"><img src="images/about-us.png" alt="links to about us page" class="icon-img"></a><p>About Us</p></li>
+            
+            <li class="icon" id="reviews"><a href="reviews.html"><img src="images/reviews.png" alt="links to reviews page" class="icon-img"></a><p>Reviews</p></li>
+
+            <li class="icon" id="services"><a href="services.html"><img src="images/services.png" alt="links to services page" class="icon-img"></a><p>Services</p></li>
+
+            <li class="icon" id="glossary"><a href="glossary.html"><img src="images/glossary.png" alt="links to glossary page" class="icon-img"></a><p>Glossary</p></li>
+            
+            </ul>
+        </section>
+
+
+        <section  id="desktop-right"> <!-- this section houses the icon list that sits to the right of the desktop -->
+            <ul id="right-icons"> <!-- this list holds the Facebook and Instagram links -->
+			<!-- each list items holds a link and its label. each link is an icon image. after the link is the label -->
+            <li class="icon" id="facebook"><a href="facebook.html"><img src="images/facebook.png" alt="links to facebook page" class="icon-img"></a><p>Facebook</p></li>
+
+            <li class="icon" id="instagram"><a href="instagram.html"><img src="images/instagram.png" alt="links to instagram page" class="icon-img"></a><p>Instagram</p></li>
+        
+            <!-- I had to add a video for the rubric, I used a random video from another class project -->
+            <li class="icon" id="video"><a href="video.html"><img src="images/video.png" alt="links to video page" class="icon-img"></a><p>Video</p></li>
+
+            </ul>
+        </section>
+    </main>
+
+
+
+    <!-- Welcome Box -->
+    <section id="box"> <!-- this box sits in the middle of the "desktop" -->
+        
+		<!-- this is an image of the Copy Cat building that says "welcome" and spans the welcome box -->
+        <img src="images/building.png" alt="picture of copy cat building" class="box-segment" id="segment-1">
+
+        <!-- this is a message, "contact or visit us for order and inquiries", that spans the welcome box -->
+		<p class="box-segment" id="segment-2">contact or visit us for orders and inquiries!</p>
+
+        <!-- this is the last section that spans the welcome box. it holds two the contact and visiting info boxes -->
+		<section class="box-segment" id="segment-3">
+            <!-- this is the contact info box, which sits to the left. on a narrower screen, it should change to sit above the visiting info box -->
+			<section class="subsegment" id="subsegment-left">
+                <ul id="contact-info"> <!-- this list contains the contact info -->
+                <!-- each list item contains the contact info (phone, fax, email) and its respective icon -->
+				<li><img src="images/phone.png" alt="Phone icon" class="contact-icon"><section class="info"><p><strong>Phone: </strong><br>804-746-0008</p></section></li>
+                <li><img src="images/fax.png" alt="Fax machine icon" class="contact-icon"><section class="info"><p><strong>Fax: </strong><br>804-746-8172</p></section></li>
+                <li><img src="images/email.png" alt="Envelope icon" class="contact-icon"><section class="info"><p><strong>E-Mail: </strong><br><a href="contact-form.html">contact form</a></p></section></li>
+                </ul>
+            </section>
+
+            <!-- this is the visiting info box, which sits to the right. on a narrower screen, it should change to sit below the contact info box -->
+            <section class="subsegment" id="subsegment-right">
+				<!-- this list contains the address. the original text should appear on a wider screen, and the switchable text on a narrower screen. the difference is so that the spacing will look better -->
+				<section class="visit">
+					<p class="original-text"><strong>Address: </strong><br>5516 Mech. Tpke.,<br>Mechanicsville,<br>VA. 23111</p>
+					<p class="switchable-text"><strong>Address: </strong><br>5516 Mechanicsville Tpke.,<br>Mechanicsville, VA. 23111</p>
+				</section>
+
+				<!-- this list contains the hours. the original text should appear on a wider screen, and the switchable text on a narrower screen. the difference is so that the spacing will look better -->
+				<section class="visit">
+					<p class="original-text"><strong>Hours: </strong><br>Mon-Thu: 7:30 - 5<br>Fri: 7:30 - 2<br>Sat-Sun: Closed</p>
+					<p class="switchable-text"><strong>Hours: </strong><br>Monday-Thurday: 7:30 - 5<br>Friday: 7:30 - 2<br>Saturday-Sunday: Closed</p>
+				</section>
+            </section>
+        </section>
+    </section>
+
+
+    <!-- Certifications -->
+     <section id="certifications"> <!-- this holds the Equality VA and SWaM certificats, which are postioned at the bottom right of the screen. on a narrower scrreen, it should span the bottom-->
+        <img src="images/equalityva.png" alt="equality va certification" id="certification-1">
+        <img src="images/swam.png" alt="SWaM certification" id="certification-2">
+     </section>
+
+
+</body>
+</html>
